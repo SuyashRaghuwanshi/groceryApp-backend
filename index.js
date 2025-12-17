@@ -6,7 +6,7 @@ const errors = require("./middleware/error.js");
 const appRoutes = require("./routes/app.routes.js");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
-const swaggerDoc= require("./swagger2.json");
+const swaggerDoc = require("./swagger2.json");
 const cors = require("cors");
 
 // ✅ Enable CORS properly
@@ -37,12 +37,12 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // ✅ Start Server
 const PORT = process.env.PORT || 3000;
-try{
-    app.listen(PORT,'0.0.0.0', () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-})
+try {
+    app.listen(PORT, '0.0.0.0', () => {
+        console.log(`🚀 Server running on port ${PORT}`);
+    })
 }
-catch(error){
+catch (error) {
     console.log(error);
 }
 
