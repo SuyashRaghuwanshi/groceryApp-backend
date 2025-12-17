@@ -1,5 +1,6 @@
 const MONGO_DB_CONFIG = {
-    DB: "mongodb://localhost/groceryApp",
+    DB: process.env.MONGO_URI || "mongodb://localhost/groceryApp",
+    // "mongodb://localhost/groceryApp"
     PAGE_SIZE: 10,
 };
 const STRIPE_CONFIG = {
