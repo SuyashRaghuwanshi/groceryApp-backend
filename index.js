@@ -23,6 +23,10 @@ mongoose
     .then(() => console.log("✅ Database connected"))
     .catch((error) => console.error("❌ Database connection failed:", error));
 
+mongoose.connection.once("open", () => {
+    console.log("🔥 CONNECTED DB NAME:", mongoose.connection.name);
+});
+
 // ✅ Middleware
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
