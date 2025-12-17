@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const TOKEN_KEY = "RANDOM_KEY";
-const BlacklistedToken = require('../models/blacklistToken');
+const BlacklistedToken = require('../models/blacklisttoken');
 function authenticateToken(req, res, next) {
     console.log("\n========== AUTH DEBUG ==========");
     console.log("Raw headers:", req.headers);
@@ -10,7 +10,7 @@ function authenticateToken(req, res, next) {
     console.log("➡️ Authorization header RECEIVED:", JSON.stringify(authHeader));
 
     console.log("🔍 RAW AUTH HEADER YOU SENT:", authHeader);
-    
+
     if (!authHeader) {
         console.log("❌ No Authorization header found.");
         return res.status(401).send({ message: "Unauthorized!" });

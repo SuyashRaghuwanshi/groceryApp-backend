@@ -1,4 +1,4 @@
-const BlacklistedToken = require('../models/blacklistToken');
+const BlacklistedToken = require('../models/blacklisttoken');
 
 function logout(req, res) {
   const authHeader = req.headers['authorization'];
