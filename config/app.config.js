@@ -3,7 +3,7 @@ const MONGO_DB_CONFIG = {
     PAGE_SIZE: 10,
 };
 const STRIPE_CONFIG = {
-    STRIPE_KEY: process.env.STRIPE_KEY,
+    STRIPE_KEY: process.env.STRIPE_SECRET_KEY,
     CURRENCY: "inr",
 }
 
