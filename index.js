@@ -11,7 +11,7 @@ const cors = require("cors");
 
 // ✅ Enable CORS properly
 app.use(cors({
-    origin: "http://localhost:5000", // Allow all origins
+    origin: "*", // Allow all origins
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
 
